@@ -17,9 +17,9 @@ class BerandaController extends Controller
         $hero = Hero::first();
         $profil = Profil_Beranda::first();
         $struktur = Struktur_Organisasi::all();
-        $berita = Berita_Beranda::with('galeri')
-            ->where('is_active', 'AKTIF')
-            ->get();
+        $berita = Berita_Beranda::with('galeriFirst')
+                    ->where('jenis_berita', 'KEGIATAN')
+                    ->get();
         $background = Background_Berita::first();
         $galeri = Galeri_Beranda::where('is_active', 'AKTIF')->latest()->take(8)->get();
         return view('beranda', compact('hero', 'profil', 'struktur', 'berita', 'background', 'galeri'));

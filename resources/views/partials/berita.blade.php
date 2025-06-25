@@ -35,11 +35,11 @@
           <div class="swiper-slide">
             <div class="row gy-4 event-item">
               <div class="col-lg-6">
-                @foreach ($item->galeri as $gambar)
-                  <img src="{{ asset('assets/img/galeri/' . $gambar->gambar) }}"
+                @if ($item->galeriFirst)
+                  <img src="{{ asset('assets/img/galeri/' .  $item->galeriFirst->gambar) }}"
                       class="img-fluid"
                       alt="Gambar Galeri">
-                @endforeach
+                @endif
               </div>
               <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <h3>{{ $item->nama }}</h3>
