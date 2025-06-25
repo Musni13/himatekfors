@@ -58,7 +58,7 @@ class PhotoController extends Controller
         ]);
 
         // Redirect dengan pesan sukses
-        return redirect()->route('admin.galeri')->with('success', 'Gambar berhasil ditambahkan!');
+        return redirect()->route('admin.galeri')->with('success', 'Gambar Berhasil Ditambahkan!');
     }
 
      public function show($id)
@@ -82,9 +82,9 @@ class PhotoController extends Controller
             'is_active' => 'required|in:AKTIF,NONAKTIF',
         ],[
                 'gambar.required'        => 'Gambar Wajib Dimasukkan!',
-                'code.required'          => 'Kode Harus diisi',
+                'code.required'          => 'Kode Harus Diisi!',
                 'gambar.dimensions'      => 'Ukuran Gambar Wajib 800 x 600!',
-                'gambar.max'             => 'Gambar Maksimal 10 MB',
+                'gambar.max'             => 'Gambar Maksimal 10 MB!',
                 'is_active.required'     => 'Status Wajib Dipilih!'
     
             ]);

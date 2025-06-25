@@ -4,7 +4,8 @@
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="{{ route('beranda') }}" class="logo d-flex align-items-center me-auto me-xl-0">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
+          
+<!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="{{ asset('assets/img/logo-hima.png') }}" alt="">
           <h1 class="sitename">HIMATEKFORS</h1>
         </a>
@@ -28,7 +29,7 @@
               <ul>
               <li><a href="{{ url('/') }}#about" class="{{ request()->routeIs('beranda') ? 'active' : '' }}">Profil</a></li>
                 <li><a href="{{ route('visimisi') }}" class="{{ request()->routeIs('visimisi') ? 'active' : '' }}">Tujuan, Usaha & Sifat</a></li>
-                <li><a href="{{ route('struktur') }}" class="{{ request()->routeIs('struktur') ? 'active' : '' }}">Struktur Penggurus</a></li>
+                <li><a href="{{ route('struktur') }}" class="{{ request()->routeIs('struktur') ? 'active' : '' }}">Struktur Pengurus</a></li>
                 <li><a href="{{ route('demisioner') }}" class="{{ request()->routeIs('demisioner') ? 'active' : '' }}">Demisioner</a></li>
               </ul>
             </li>
@@ -57,12 +58,8 @@
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
-
       </div>
-
     </div>
-
   </header>
 
   <script>

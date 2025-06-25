@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Profil_Beranda;
 
@@ -19,16 +20,18 @@ class ProfilController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'nama' => 'required',
-            'gambar_depan' => $request->hasFile('gambar_depan') ? 'image|mimes:jpg,jpeg,png|max:10240' : '',
-            'gambar_belakang' => $request->hasFile('gambar_belakang') ? 'image|mimes:jpg,jpeg,png|max:10240' : '',
+            'gambar_depan' => $request->hasFile('gambar_depan') ? 'image|mimes:jpg,jpeg,png|max:10240|dimensions:width=1033,height=768' : '',
+            'gambar_belakang' => $request->hasFile('gambar_belakang') ? 'image|mimes:jpg,jpeg,png|max:10240|dimensions:width=1920,height=1280' : '',
         
         ],[
 
-            'nama.required'            => 'Profil Wajib Diisi!',
-            'gambar_depan.required'    => 'Gambar Profil Wajib Dimasukkan!',
-            'gambar_depan.max'         => 'Gambar Maksimal 10 MB',
-            'gambar_belakang.required' => 'Background Wajib Dimasukkan!',
-            'gambar_belakang.max'      => 'Gambar Maksimal 10 MB',
+            'nama.required'                 => 'Profil Wajib Diisi!',
+            'gambar_depan.required'         => 'Gambar Profil Wajib Dimasukkan!',
+            'gambar_depan.dimensions'       => 'Ukuran Gambar Wajib 1033 x 768!',
+            'gambar_depan.max'              => 'Gambar Maksimal 10 MB',
+            'gambar_belakang.required'      => 'Background Wajib Dimasukkan!',
+            'gambar_belakang.dimensions'    => 'Ukuran Gambar Wajib 1920 x 1280!',
+            'gambar_belakang.max'           => 'Gambar Maksimal 10 MB',
 
         ]);
 

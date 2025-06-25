@@ -1,17 +1,17 @@
 @extends('layouts.app')
-
 @section('content')
+
 <!-- Chefs Section -->
     <section id="chefs" class="chefs section">
 
-      <!-- Section Title -->
+<!-- Section Title -->
       <div class="container section-title mt-3 pt-3" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>Demisioner</p>
-      </div><!-- End Section Title -->
+        <h2>demisioner</h2>
+        <p>DEMISIONER</p>
+      </div>
+<!-- End Section Title -->
 
       <div class="container">
-
         <div class="row gy-4">
           @foreach($demisioners as $item)
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
@@ -40,8 +40,7 @@
           </div>
           @endforeach
         </div>
-
       </div>
-
-</section><!-- /Chefs Section -->
+</section>
+<!-- /Chefs Section -->
 @endsection

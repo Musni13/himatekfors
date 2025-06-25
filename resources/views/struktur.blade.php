@@ -1,16 +1,14 @@
 @extends('layouts.app')
-
 @section('title', 'Struktur Organisasi')
 @section('content')
 <section id="struktur" class="menu section">
   <div class="container section-title mt-3 pt-3" data-aos="fade-up">
-    <h2>struktur penggurus</h2>
-    <p>STRUKTUR PENGGURUS</p>
+    <h2>struktur pengurus</h2>
+    <p>STRUKTUR PENGURUS</p>
   </div>
-
   <div class="container" data-aos="fade-up" data-aos-delay="200">
 
-    {{-- Pimpinan --}}
+{{-- Pimpinan --}}
     @if($kelompok['PIMPINAN']->count())
     <div class="text-center mb-5">
       <h4>PIMPINAN</h4>
@@ -20,7 +18,7 @@
     </div>
     @endif
 
-    {{-- Bendahara & Sekretaris --}}
+{{-- Bendahara & Sekretaris --}}
     <div class="row justify-content-center mb-5">
     @foreach($kelompok['SEKRETARIS'] as $item)
         <div class="col-md-4 text-center">
@@ -36,7 +34,7 @@
       @endforeach
     </div>
 
-    {{-- Struktur Per Divisi Berdasarkan Posisi --}}
+{{-- Struktur Per Divisi Berdasarkan Posisi --}}
 @foreach($divisiData as $div)
   @if($div['pimpinan']->count())
     <div class="text-center mb-3">
@@ -64,9 +62,6 @@
     </div>
   @endif
 @endforeach
-
-
-
   </div>
 </section>
 @endsection

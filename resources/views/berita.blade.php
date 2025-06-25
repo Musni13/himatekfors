@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+
 <!-- Testimonials Section -->
 <section id="testimonials" class="testimonials section">
 
@@ -8,10 +8,10 @@
 <div class="container section-title pt-3 mt-3" data-aos="fade-up">
   <h2>berita</h2>
   <p>BERITA</p>
-</div><!-- End Section Title -->
+</div>
+<!-- End Section Title -->
 
 <div class="container" data-aos="fade-up" data-aos-delay="100">
-
   <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
     <script type="application/json" class="swiper-config">
       {
@@ -51,7 +51,7 @@
               </p>
               <p class="berita-detail-box">
               </p>
-              <h4 class="pb-5 mb-1">
+              <h6 class="pb-5 mb-1">
                 <a href="{{ route('berita.show', $item->id) }}">
                     {{ Str::limit($item->detail_berita, 50) }}
                 </a>
@@ -61,9 +61,10 @@
                   {{ \Carbon\Carbon::parse($item->created_at)->locale('id')->isoFormat('HH:mm') }}
                   {{ \Carbon\Carbon::parse($item->tanggal)->locale('id')->isoFormat('dddd, D MMMM Y') }}
                   </span>
-              </h4>
+              </h6>
           </div>
-        </div><!-- End testimonial item -->
+        </div>
+<!-- End testimonial item -->
       @endforeach
     </div>
     <div class="swiper-pagination"></div>
@@ -71,5 +72,6 @@
 
 </div>
 
-</section><!-- /Testimonials Section -->
+</section>
+<!-- /Testimonials Section -->
 @endsection

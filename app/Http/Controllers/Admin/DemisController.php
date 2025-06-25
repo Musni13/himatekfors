@@ -32,7 +32,7 @@ class DemisController extends Controller
             'facebook'   => 'nullable|string|max:255',
             'instagram'  => 'nullable|string|max:255',
             'twitter'    => 'nullable|string|max:255',
-            'gambar'     => 'required|image|mimes:jpeg,png,jpg|max:10240',
+            'gambar'     => 'required|image|mimes:jpeg,png,jpg|max:10240|dimensions:width=600,height=600',
             'is_active'  => 'required|in:AKTIF,NONAKTIF',
 
             ],[
@@ -44,6 +44,7 @@ class DemisController extends Controller
             'periode.required'   => 'Periode Wajib Diisi!',
             'periode.required'   => 'Periode Maksimal 255 Karakter!',
             'gambar.required'    => 'Gambar Wajib Dimasukkan!',
+            'gambar.dimensions'  => 'Ukuran Gambar Wajib 600 x 600!',
             'gambar.max'         => 'Gambar Maksimal 10 MB',
             'is_active.required' => 'Status Wajib Dipilih!'
 
@@ -105,7 +106,7 @@ class DemisController extends Controller
             'facebook'   => 'nullable|string|max:255',
             'instagram'  => 'nullable|string|max:255',
             'twitter'    => 'nullable|string|max:255',
-            'gambar'     => 'nullable|image|mimes:jpeg,png,jpg|max:10240',
+            'gambar'     => 'nullable|image|mimes:jpeg,png,jpg|max:10240|dimensions:width=600,height=600',
             'is_active'  => 'required|in:AKTIF,NONAKTIF',
         ], [
             'nama.required'      => 'Nama Wajib Diisi!',
@@ -113,7 +114,9 @@ class DemisController extends Controller
             'nph.required'       => 'NPH Wajib Diisi!',
             'nph.min'            => 'NPH Minimal 15 Karakter!',
             'periode.required'   => 'Periode Wajib Diisi!',
+            'gambar.required'    => 'Gambar Wajib Dimasukkan!',
             'gambar.max'         => 'Gambar Maksimal 10 MB',
+            'gambar.dimensions'  => 'Ukuran Gambar Wajib 600 x 600!',
             'is_active.required' => 'Status Wajib Dipilih!',
         ]);
 

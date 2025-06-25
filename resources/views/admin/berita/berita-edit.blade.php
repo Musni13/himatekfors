@@ -31,7 +31,7 @@
         @method('PUT')
         <div class="row">
             <!-- Form Input -->
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-12 col-lg-7">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Form Ubah Data Informasi</h6>
@@ -77,24 +77,6 @@
                         
                         <!-- Tombol Simpan -->
                         <button type="submit" class="btn btn-primary">Simpan</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Upload Gambar -->
-            <div class="col-xl-4 col-lg-5">
-                <div class="card shadow mb-4 border-bottom-primary">
-                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Gambar</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                             @if(!empty($berita->gambar))
-                                <img src="{{ asset('assets/img/informasi/' . $berita->gambar) }}" 
-                                     alt="{{ $berita->nama }}" class="img-fluid mt-2 mb-2" style="max-width: 300px;">
-                            @endif
-                            <input type="file" name="gambar" class="form-control-file" value="{{ $berita->gambar }}">
-                        </div>
                     </div>
                 </div>
             </div>

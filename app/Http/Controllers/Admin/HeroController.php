@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Hero;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -21,18 +22,17 @@ class HeroController extends Controller
             'nama'            => 'required',
             'slogan'          => 'required',
             'url_youtube'     => 'required|url',
-            'logo'            => $request->hasFile('logo') ? 'image|mimes:jpg,jpeg,png|max:10248' : '',
+            'logo'            => $request->hasFile('logo') ? 'image|mimes:jpg,jpeg,png|max:10248|dimensions:width=1920,height=1052' : '',
         
             ],[
 
             'nama.required'         => 'Nama Wajib Diisi!',
-            'gambar.required'       => 'Gambar Wajib Dimasukkan!',
-            'gambar.max'            => 'Gambar Maksimal 10 MB',
+            'logo.required'       => 'Gambar Wajib Dimasukkan!',
+            'logo.dimensions'      => 'Ukuran Gambar Wajib 1920 x 1052!',
+            'logo.max'            => 'Gambar Maksimal 10 MB',
             'slogan.required'       => 'Slogan Wajib Diisi!',
             'url_youtube.required'  => 'URL Youtube Wajib Diisi!',
 
-
-            
         ]);
 
         if ($validator->fails()) {

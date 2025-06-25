@@ -7,7 +7,8 @@
 <div class="container section-title" data-aos="fade-up">
   <h2>profil</h2>
   <p>PROFIL</p>
-</div><!-- End Section Title -->
+</div>
+<!-- End Section Title -->
 
   <div class="row gy-4">
     <div class="col-lg-6 order-1 order-lg-2">
@@ -21,5 +22,5 @@
   </div>
 
 </div>
-
-</section><!-- /About Section -->
+</section>
+<!-- /About Section -->

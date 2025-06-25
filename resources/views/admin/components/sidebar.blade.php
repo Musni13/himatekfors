@@ -82,8 +82,8 @@
 
             <li class="nav-item {{ request()->routeIs('saran') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('saran') }}">
-                    <i class="fas fa-file-download"></i>
-                    <span>Kotak Saran</span></a>
+                    <i class="fas fa-envelope-open-text"></i>
+                    <span>Saran</span></a>
             </li>
 
             <!-- Divider -->

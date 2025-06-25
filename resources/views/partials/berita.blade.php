@@ -5,7 +5,8 @@
 <div class="container section-title" data-aos="fade-up">
   <h2>informasi</h2>
   <p>INFORMASI</p>
-</div><!-- End Section Title -->
+</div>
+<!-- End Section Title -->
 
 <img class="slider-bg" src="{{ asset('assets/img/informasi/' . $background->gambar) }}" alt="" data-aos="fade-in">
 
@@ -55,12 +56,14 @@
                   <span>{{ \Carbon\Carbon::parse($item->tanggal)->locale('id')->isoFormat('dddd, D MMMM Y') }}</span>
                 </p>
                 <div class="price"></div>
-                <p>
+                  <p style="text-align: justify;">
                   {{ $item->detail_berita }}
                 </p>
               </div>
             </div>
-          </div><!-- End Slider item -->
+          </div>       
+<!-- End Slider item -->
+
           @endif
         @endforeach
     </div>
@@ -70,4 +73,5 @@
 
 </div>
 
-</section><!-- /Events Section -->
+</section>
+<!-- /Events Section -->

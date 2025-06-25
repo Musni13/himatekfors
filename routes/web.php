@@ -22,6 +22,7 @@ use App\Http\Controllers\Admin\StrukturController;
 use App\Http\Controllers\Admin\DemisController;
 use App\Http\Controllers\Admin\UnduhController;
 use App\Http\Controllers\Admin\SaranController;
+use App\Http\Controllers\Admin\PasswordController;
 /*
 |--------------------------------------------------------------------------
 | Public Routes
@@ -127,6 +128,11 @@ Route::get('/admin/unduhan/hapus/{id}', [UnduhController::class, 'delete'])->nam
 
 Route::get('/admin/saran', [SaranController::class, 'index'])->name('saran');
 Route::get('/admin/saran/tampil/{id}', [SaranController::class, 'show'])->name('saran.show');
+Route::get('/admin/saran/hapus/{id}', [SaranController::class, 'delete'])->name('saran.hapus');
+
+Route::get('/admin/password', [PasswordController::class, 'index'])->name('password');
+Route::post('/admin/password', [PasswordController::class, 'store'])->name('password.store');
+
 
 Route::get('/admin/database', [DatabaseController::class, 'index'])->name('database');
 Route::post('/admin/database', [DatabaseController::class, 'store'])->name('database.store');

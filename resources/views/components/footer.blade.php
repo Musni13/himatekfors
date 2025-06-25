@@ -13,35 +13,29 @@
             <p><strong>E-mail:</strong> <span>info@example.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/Himatekforsunimuda"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/himatekfors.unimuda?igsh=NXBrZDM1dzFkNTQw"><i class="bi bi-instagram"></i></a>
+            <a href="https://youtube.com/@himatekforsstkipmuhammadiy929?si=IhPncRkTulLE8Iqh"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
         <div class="col-lg-4 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="{{ route('auth') }}">Login</a></li>
+            <li><a href="{{ route('auth') }}">LOGIN</a></li>
             <li><a href="https://siakad.unimudasorong.ac.id/">SIAKAD UNIMUDA</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="https://lp3a.unimudasorong.ac.id/">LP3A UNIMUDA SORONG</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="https://unimudasorong.ac.id/">UNIMUDA SORONG</a></li>
+            <li><a href="https://feksa.unimudasorong.ac.id/">FEKSA UNIMUDA SORONG</a></li>
+            <li><a href="https://pti.unimudasorong.ac.id/">PTI UNIMUDA SORONG</a></li>
           </ul>
         </div>
-
-
       </div>
     </div>
 

@@ -2,13 +2,13 @@
 <section id="why-us" class="why-us section">
 
 <!-- Section Title -->
-<div class="container section-title pt-3" data-aos="fade-up">
+<div class="container section-title" data-aos="fade-up">
   <h2>struktur penggurus</h2>
   <p>STRUKTUR PENGGURUS</p>
-</div><!-- End Section Title -->
+</div>
+<!-- End Section Title -->
 
 <div class="container">
-
   <div class="row gy-4">
 
   @php
@@ -29,7 +29,8 @@
       <p class="text-center">{{ ($kiri->nama) }}</p>
     </div>
     @endif
-  </div><!-- Card Item -->
+  </div>
+<!-- Card Item -->
 
   <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
   @if($tengah) 
@@ -43,7 +44,8 @@
       <p class="text-center">{{ ($tengah->nama) }}</p>
     </div>
     @endif
-  </div><!-- Card Item -->
+  </div>
+<!-- Card Item -->
 
   <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100"> 
   @if($kanan)
@@ -57,10 +59,10 @@
       <p class="text-center">{{ ($kanan->nama) }}</p>
     </div>
     @endif
-  </div><!-- Card Item -->
+  </div>
+<!-- Card Item -->
 
   </div>
-
 </div>
-
-</section><!-- /Why Us Section -->
+</section>
+<!-- /Why Us Section -->

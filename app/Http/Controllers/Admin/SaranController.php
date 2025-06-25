@@ -23,5 +23,20 @@ class SaranController extends Controller
         $saran = Masukan_Beranda::first();
         return view('admin.saran.show', compact('saran'));
     }
+
+     public function delete($id)
+    {
+        $saran = Masukan_Beranda::findOrFail($id);
+
+        // Hapus gambar jika ada
+        if ($saran->gambar && file_exists(public_path('assets/template/img/' . $saran->gambar))) {
+            unlink(public_path('assets/template/img/' . $saran->gambar));
+        }
+
+        $saran->delete();
+
+        return redirect()->route('saran')->with('success', 'Data Berhasil Dihapus!');
+    }
+
 }
 

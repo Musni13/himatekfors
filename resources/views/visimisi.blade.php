@@ -1,18 +1,18 @@
 @extends('layouts.app')
-
 @section('title', 'Visi & Misi')
 @section('content')
-         <!-- Specials Section -->
+
+<!-- Specials Section -->
  <section id="specials" class="specials section">
 
 <!-- Section Title -->
 <div class="container section-title mt-3 pt-3" data-aos="fade-up">
   <h2>tujuan, usaha & sifat</h2>
-  <p>Tujuan, Usaha & Sifat</p>
-</div><!-- End Section Title -->
+  <p>TUJUAN, USAHA & SIFAT</p>
+</div>
+<!-- End Section Title -->
 
 <div class="container" data-aos="fade-up" data-aos-delay="100">
-
   <div class="row">
     <div class="col-lg-3">
       <ul class="nav nav-tabs flex-column">
@@ -38,8 +38,7 @@
       </div>
     </div>
   </div>
-
 </div>
-
-</section><!-- /Specials Section -->
+</section>
+<!-- /Specials Section -->
 @endsection

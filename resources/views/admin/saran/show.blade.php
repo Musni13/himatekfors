@@ -12,12 +12,12 @@
             <div class="col-xl-12 col-lg-7">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Lihat Data</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Form Lihat Data Saran</h6>
                     </div>
                     <div class="card-body border-bottom-primary">
                     <p><strong>Nama:</strong> {{ $saran->nama }}</p>
                     <hr>
-                    <p><strong>E-Mail:</strong> {{ $saran->email }}</p>
+                    <p><strong>E-mail:</strong> {{ $saran->email }}</p>
                     <hr>
                     <p><strong>Judul:</strong> {{ $saran->judul }}</p>
                    <hr>

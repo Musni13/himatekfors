@@ -25,9 +25,22 @@ class InformasiController extends Controller
         $background = Background_Berita::first(); // atau ->find(1)
 
         // Validasi input
-        $request->validate([
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:10248',
+        $validator = Validator::make($request->all(), [
+            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:10248|dimensions:width=1920,height=1280',
+
+            ],[
+
+            'gambar.required'        => 'Gambar Wajib Dimasukkan!',
+            'gambar.dimensions'      => 'Ukuran Gambar Wajib 1920 x 1280!',
+            'gambar.max'             => 'Gambar Maksimal 10 MB',
         ]);
+
+         if ($validator->fails()) {
+                return redirect()->back()
+                    ->withErrors($validator)
+                    ->withInput()
+                    ->with('error', $validator->errors()->first()); // tampilkan error flash
+            }
 
         // Jika ada file baru diupload
         if ($request->hasFile('gambar')) {
@@ -70,14 +83,21 @@ class InformasiController extends Controller
             
         ],[
             'nama.required'          => 'Nama Wajib Diisi!',
-            'random_code.required'   => 'Generate Kode wajib dilalukan',
+            'random_code.required'   => 'Generate Kode Wajib Dilalukan!',
             'detail_berita.required' => 'Detail Berita Wajib Diisi!',
             'jenis_berita.required'  => 'Jenis Berita Wajib Dipilih!',
             'tanggal.required'       => 'Tanggal Wajib Diisi!',
             'is_active.required'     => 'Status Wajib Dipilih!'
   
         ]);
-
+        
+          if ($validator->fails()) {
+                return redirect()->back()
+                    ->withErrors($validator)
+                    ->withInput()
+                    ->with('error', $validator->errors()->first()); // tampilkan error flash
+            }
+            
         // Simpan data
         Berita_Beranda::create([
             'nama'          => $request->nama,
@@ -115,6 +135,7 @@ class InformasiController extends Controller
             'is_active'      => 'required|in:AKTIF,NONAKTIF',
         
              ],[
+
             'nama.required'          => 'Nama Wajib Diisi!',
             'detail_berita.required' => 'Detail Berita Wajib Diisi!',
             'jenis_berita.required'  => 'Jenis Berita Wajib Dipilih!',

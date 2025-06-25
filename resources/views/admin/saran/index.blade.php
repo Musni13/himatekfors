@@ -38,6 +38,11 @@
                                                         <a href="{{ route('saran.show', $i->id) }}" class="btn btn-primary btn-circle btn-sm mr-1">
                                                             <i class="fas fa-eye"></i>
                                                         </a>
+                                                        <a href="{{ route('saran.hapus', $i->id) }}"
+                                                            onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data Ini?')"
+                                                            class="btn btn-danger btn-circle btn-sm">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
                                                     </div>
                                                 </td>
                                             </tr>
