@@ -105,7 +105,7 @@
                         <input type="file" name="gambar" class="form-control-file mt-2 mx-auto d-block" style="width: fit-content;">
                         
                         <!-- Tombol Simpan -->
-                        <div class="text-right">
+                        <div class="text-right mr-3">
                             <button type="submit" class="btn btn-primary">Simpan</button>
                         </div>
                     </div>

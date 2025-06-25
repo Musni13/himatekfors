@@ -10,6 +10,7 @@ use App\Models\Berita_Beranda;
 use App\Models\Background_Berita;
 use App\Models\Galeri_Beranda;
 use App\Models\Masukan_Beranda;
+use Illuminate\Support\Str;
 class BerandaController extends Controller
 {
     public function index()

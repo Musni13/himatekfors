@@ -26,12 +26,11 @@ class PhotoController extends Controller
         // Validasi data
         $validator = Validator::make($request->all(), [
            'gambar'          => 'required|image|mimes:jpeg,png,jpg|max:10248|dimensions:width=800,height=600',
-           'code'            => 'required',
+           'code',
             'is_active'      => 'required|in:AKTIF,NONAKTIF',
        ],[
             'gambar.required'        => 'Gambar Wajib Dimasukkan!',
             'gambar.dimensions'      => 'Ukuran Gambar Wajib 800 x 600!',
-            'code.required'          => 'Kode Harus diisi',
             'gambar.max'             => 'Gambar Maksimal 10 MB',
             'is_active.required'     => 'Status Wajib Dipilih!'
   
@@ -78,11 +77,10 @@ class PhotoController extends Controller
         // Validasi data
         $validator = Validator::make($request->all(), [
             'gambar'    => 'nullable|image|mimes:jpeg,png,jpg|max:10248|dimensions:width=800,height=600',
-            'code'      => 'required',
+            'code',
             'is_active' => 'required|in:AKTIF,NONAKTIF',
         ],[
                 'gambar.required'        => 'Gambar Wajib Dimasukkan!',
-                'code.required'          => 'Kode Harus Diisi!',
                 'gambar.dimensions'      => 'Ukuran Gambar Wajib 800 x 600!',
                 'gambar.max'             => 'Gambar Maksimal 10 MB!',
                 'is_active.required'     => 'Status Wajib Dipilih!'

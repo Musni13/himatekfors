@@ -75,7 +75,7 @@ class InformasiController extends Controller
         // Validasi data
         $validator = Validator::make($request->all(), [
             'nama'           => 'required|string|max:255',
-            'random_code'    => 'required|unique',
+            'random_code'    => 'required|unique:berita_beranda',
             'jenis_berita'   => 'required|in:BERITA,KEGIATAN,PENGUMUMAN',
             'tanggal'        => 'required|date',
             'is_active'      => 'required|in:AKTIF,NONAKTIF',

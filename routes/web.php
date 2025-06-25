@@ -131,7 +131,7 @@ Route::get('/admin/saran/tampil/{id}', [SaranController::class, 'show'])->name('
 Route::get('/admin/saran/hapus/{id}', [SaranController::class, 'delete'])->name('saran.hapus');
 
 Route::get('/admin/password', [PasswordController::class, 'index'])->name('password');
-Route::post('/admin/password', [PasswordController::class, 'store'])->name('password.store');
+Route::put('/admin/password', [PasswordController::class, 'update'])->name('password.update');
 
 
 Route::get('/admin/database', [DatabaseController::class, 'index'])->name('database');

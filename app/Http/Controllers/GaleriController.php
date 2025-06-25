@@ -7,15 +7,10 @@ use Illuminate\Http\Request;
 
 class GaleriController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $galeri = Galeri_Beranda::whereNull('code') // hanya yang tidak terkait berita
-                    ->latest()
-                    ->take(16)
-                    ->get();
+        $galeri = Galeri_Beranda::where('code', 'like', '%-%')->get();
+
 
         return view('galeri', compact('galeri'));
     }

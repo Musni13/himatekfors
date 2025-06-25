@@ -12,11 +12,11 @@
 
 <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
   <div class="row g-0">
-  @foreach ($galeri as $galeri)
+  @foreach ($galeri as $item)
   <div class="col-lg-3 col-md-4">
     <div class="gallery-item">
-      <a href="{{ asset('assets/img/galeri/' . $galeri->gambar) }}" class="glightbox" data-gallery="images-gallery">
-        <img src="{{ asset('assets/img/galeri/' . $galeri->gambar) }}" alt="" class="img-fluid">
+      <a href="{{ asset('assets/img/galeri/' . $item->gambar) }}" class="glightbox" data-gallery="images-gallery">
+        <img src="{{ asset('assets/img/galeri/' . $item->gambar) }}" alt="" class="img-fluid">
       </a>
     </div>
   </div>

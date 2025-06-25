@@ -25,7 +25,7 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    @endif
+    @endif
 
     <form action="{{ route('hero.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
