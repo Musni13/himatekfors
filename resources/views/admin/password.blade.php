@@ -56,7 +56,7 @@
                         <!-- Konfirmasi Password -->
                         <div class="form-group position-relative">
                             <label>Konfirmasi Password</label>
-                            <input type="password" name="konvirmasi_password" class="form-control" id="konfirmasi_password">
+                            <input type="password" name="konfirmasi_password" class="form-control" id="konfirmasi_password">
                             <span toggle="#konfirmasi_password" class="fa fa-fw fa-eye field-icon toggle-password" style="position:absolute; right:10px; top:38px; cursor:pointer;"></span>
                         </div>
 

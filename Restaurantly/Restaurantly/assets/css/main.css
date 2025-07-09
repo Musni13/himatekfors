@@ -222,7 +222,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(12, 11, 9, 0.61);
+  --background-color: rgba(201, 153, 56, 0.61);
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;

@@ -26,12 +26,12 @@ class InformasiController extends Controller
 
         // Validasi input
         $validator = Validator::make($request->all(), [
-            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:10248|dimensions:width=1920,height=1280',
+            'gambar' => 'nullable|image|mimes:jpg,jpeg,png|max:10248|dimensions:width=1920,height=1052',
 
             ],[
 
             'gambar.required'        => 'Gambar Wajib Dimasukkan!',
-            'gambar.dimensions'      => 'Ukuran Gambar Wajib 1920 x 1280!',
+            'gambar.dimensions'      => 'Ukuran Gambar Wajib 1920 x 1052!',
             'gambar.max'             => 'Gambar Maksimal 10 MB',
         ]);
 

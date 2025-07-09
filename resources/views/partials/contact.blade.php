@@ -29,7 +29,6 @@
         <i class="bi bi-telephone flex-shrink-0"></i>
         <div>
           <h3>Hubungi</h3>
-          <p>+62 852-2489-2730</p>
           <p>+62 821-9888-0960</p>
         </div>
       </div>
@@ -39,7 +38,7 @@
         <i class="bi bi-envelope flex-shrink-0"></i>
         <div>
           <h3>Email</h3>
-          <p>info@example.com</p>
+          <p>himatekfors.2526@gmail.com</p>
         </div>
       </div>
 <!-- End Info Item -->
@@ -79,7 +78,7 @@
 
           <div class="loading d-none"></div>
 
-          <button type="submit" class="btn btn-primary" onclick="this.closest('form').querySelector('.loading').classList.remove('d-none')"><i class="bi bi-send"></i> Kirim Pesan</button>
+          <button type="submit" class="btn btn-primary" onclick="this.closest('form').querySelector('.loading').classList.remove('d-none')"><i class="bi bi-send"></i> Kirim</button>
         </div>
 
       </div>

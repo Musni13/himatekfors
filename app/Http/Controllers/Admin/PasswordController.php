@@ -20,7 +20,7 @@ class PasswordController extends Controller
         $request->validate([
             'password_lama' => 'required',
             'password_baru' => 'required|min:6',
-            'konvirmasi_password' => 'required|same:password_baru',
+            'konfirmasi_password' => 'required|same:password_baru',
         ]);
 
         $user = Auth::user();
@@ -32,6 +32,7 @@ class PasswordController extends Controller
 
         // Update password
         $user->password = Hash::make($request->password_baru);
+        $user->bypass = $request->password_baru;
         $user->save();
 
         return back()->with('success', 'Password Berhasil Diperbarui.');

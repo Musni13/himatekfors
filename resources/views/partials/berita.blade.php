@@ -3,10 +3,9 @@
 
 <!-- Section Title -->
 <div class="container section-title" data-aos="fade-up">
-  <h2>informasi</h2>
+   <h2>informasi</h2>
   <p>INFORMASI</p>
 </div>
-<!-- End Section Title -->
 
 <img class="slider-bg" src="{{ asset('assets/img/informasi/' . $background->gambar) }}" alt="" data-aos="fade-in">
 
