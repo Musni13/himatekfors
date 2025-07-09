@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CKEditorTokenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\VisiMisiController;
@@ -28,6 +29,8 @@ use App\Http\Controllers\Admin\PasswordController;
 | Public Routes
 |--------------------------------------------------------------------------
 */
+
+Route::get('/ckeditor/token', [CKEditorTokenController::class, 'generate']);
 
 // Login Page
 Route::get('/auth', [LoginController::class, 'showLoginForm'])->name('auth');

@@ -81,7 +81,7 @@
                         <!-- Detail Informasi -->
                         <div class="form-group">
                             <label>Detail Informasi</label>
-                            <textarea name="detail_berita" rows="4" class="form-control" placeholder="Masukkan Detail Informasi"></textarea>
+                            <textarea name="detail_berita" id="editor" rows="4" class="form-control" placeholder="Masukkan Detail Informasi"></textarea>
                         </div>
                         
                         <!-- Tombol Simpan -->
@@ -103,5 +103,16 @@
         }
         document.getElementById('random_code').value = result;
     }
+
+    ClassicEditor
+    .create(document.querySelector('#editor'), {
+        cloudServices: {
+            tokenUrl: '/api/ckeditor/token',
+            uploadUrl: 'https://m4jNR09J6qirQvCd0RoL.cke-cs.com/easyimage/upload/'
+        }
+    })
+    .catch(error => {
+        console.error(error);
+    });
 </script>
 @endsection
